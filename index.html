@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Smart Ticketing</title>
+
+    <!-- Daisy UI CDN -->
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .font-raleway {
+            font-family: "Raleway", sans-serif;
+        }
+
+        .font-inter {
+            font-family: "Inter", sans-serif;
+        }
+    </style>
+
+
+
+
+</head>
+
+<body>
+
+    <header class=".font-raleway">
+
+        <nav class="container mx-auto flex justify-between ">
+
+            <h1 class="text-[#030712]  font-extrabold text-4xl">P-Ticket</h1>
+            <div class="bg-[#1DD1001A] flex justify-center items-center space-x-1 py-4 px-7 mr-14">
+                <h3 class="text-[#1DD100] text-sm font-bold ">Bus</h3>
+                <img src="images/bus-icon.png" alt="">
+
+
+            </div>
+
+        </nav>
+
+        <div
+            class="nav-img container mx-auto bg-[url('images/banner.png')]  bg-cover bg-center bg-no-repeat  lg:h-[600px] mt-4 lg:px-24 lg:py-24">
+
+            <div class="text-center mx-auto  lg:w-[742px]">
+                <p class="text-white lg:text-6xl text-xl">End to End Travel with <span
+                        class="text-[#1DD100] lg:font-extrabold">Badhon
+                        Paribhan</span></p>
+
+                <p class="text-white lg:font-light lg:text-center  lg:mt-6 lg:text-xl">You can visit Noakhali to
+                    Chattogram
+                    and
+                    vice
+                    versa
+                    with
+                    this Bus service and there are special offers for the students</p>
+
+                <button id="buy-tickets"
+                    class="bg-[#1DD100] rounded-sm text-center text-[#030712] lg:mt-6 lg:w-36 lg:py-5 lg:px-7">Buy
+                    Tickets</button>
+            </div>
+
+
+
+        </div>
+
+        <div class="relative flex items-center justify-center lg:space-x-5  lg:-mt-10 z-10">
+
+            <div
+                class="flex items-center justify-center lg:space-x-1 lg:w-72 rounded-3xl bg-[#FFFFFF] lg:border-b-[3px] border-b-[1px] border-b-[#1DD100] ">
+                <img src="images/people.png" alt="">
+
+                <div>
+                    <h3 class="text-[#030712] text-xs lg:text-4xl">500K+</h3>
+                    <h4 class="text-[#03071299] text-xs lg:text-xl lg:font-normal">Registered Users</h4>
+                </div>
+
+            </div>
+
+            <div
+                class="flex items-center justify-center space-x-1 lg:w-72 rounded-3xl bg-[#FFFFFF] lg:border-b-[3px] border-b-[1px] border-b-[#1DD100]">
+                <img src="images/ticket-cupon.png" alt="">
+
+                <div>
+                    <h3 class="text-[#030712] text-xs lg:text-4xl">1.7 lacks</h3>
+                    <h4 class="text-[#03071299] text-xs text-xl lg:font-normal">Tickets Sold</h4>
+                </div>
+
+            </div>
+
+            <div
+                class="flex items-center justify-center space-x-1 lg:w-72 rounded-3xl bg-[#FFFFFF] lg:border-b-[3px] border-b-[1px] border-b-[#1DD100]">
+                <img src="images/stoppage.png" alt="">
+
+                <div>
+                    <h3 class="text-[#030712] text-xs lg:text-4xl">80K+</h3>
+                    <h4 class="text-[#03071299] text-xs lg:text-xl lg:font-normal">Rental Partners</h4>
+                </div>
+
+            </div>
+
+
+
+
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- Best offer section starts here... -->
+
+        <section class="best-offer container mx-auto  lg:mt-12 lg:p-8">
+
+            <h1 class="text-[#030712] .font-raleway lg:text-4xl text-xl text-center">Best offers for you</h1>
+
+            <div class="flex mt-2 lg:mt-4 flex-col gap-y-4  lg:flex-row lg:gap-x-6  ">
+                <div class=" lg:rounded-3xl mt-1 lg:mt-6 rounded-md bg-[#FFBF0F] flex items-center justify-center ">
+
+                    <div class="text-center .font-inter p-2 lg:p-10">
+                        <h1 class="text-[#030712CC] lg:text-4xl text-xl font-normal lg:font-black">15% OFF</h1>
+                        <p class="text-[#030712CC] lg:text-2xl text-xl font-normal lg:font-semibold">on your next
+                            purchase</p>
+                        <p class="text-[#03071280] text-xs lg:text-xl  font-normal ">use by January 2024</p>
+
+                    </div>
+
+                    <img src="images/cupon-devider.png" alt="">
+
+                    <div class="text-center .font-inter p-2 lg:p-10">
+                        <h1 class="text-[#030712CC] lg:text-4xl text-xl font-normal lg:font-black">NEW<sub>15</sub>
+                        </h1>
+
+                        <p class="text-[#03071280] text-xs lg:text-xl  font-normal lg:mt-2">Coupon Code</p>
+
+                    </div>
+
+
+
+                </div>
+
+                <div class=" lg:rounded-3xl mt-1 lg:mt-6 rounded-md bg-[#F78C9C] flex items-center justify-center ">
+
+                    <div class="text-center .font-inter p-2 lg:p-10">
+                        <h1 class="text-[#030712CC] lg:text-4xl text-xl font-normal lg:font-black">20% OFF</h1>
+                        <p class="text-[#030712CC] lg:text-2xl text-xl font-normal lg:font-semibold">on your next
+                            purchase</p>
+                        <p class="text-[#03071280] text-xs lg:text-xl  font-normal ">use by January 2024</p>
+
+                    </div>
+
+                    <img src="images/cupon-devider.png" alt="">
+
+                    <div class="text-center .font-inter p-2 lg:p-10">
+                        <h1 class="text-[#030712CC] lg:text-4xl text-xl font-normal lg:font-black">NEW<sub>15</sub>
+                        </h1>
+
+                        <p class="text-[#03071280] text-xs lg:text-xl  font-normal lg:mt-2">Coupon Code</p>
+
+                    </div>
+
+
+
+                </div>
+
+
+
+
+
+
+
+            </div>
+
+
+            <div class="text-center   mt-8 rounded-xl border-[1px] border-[#1DD100] mx-auto w-max p-4 lg:p-8 ">
+                <Button class="text-[#1DD100] lg:text-xl text-xs lg:font-bold font-medium text-center">See All
+                    Offers</Button>
+
+            </div>
+
+
+
+
+
+        </section>
+
+
+        <!-- Best offer section ends here..... -->
+
+
+        <!-- Badhon Paribahan Section starts here.... -->
+
+        <section class="badhan-paribahan container mx-auto lg:mt-8 mt-4 text-center .font-raleway">
+
+            <h1 class="text-[#030712] lg:text-4xl text-2xl lg:font-bold font-medium">Badhan Paribahan</h1>
+            <p class="lg:mt-6 mt-2 text-xl font-normal">Yes you can travel from Noakhali to Chittagong and vice versa
+                through this service.
+                It is one of the best
+                service.</p>
+
+
+            <div class="flex flex-col lg:flex-row">
+
+                <!-- 1st div -->
+
+                <div>
+
+                    <div>
+                        <img src="images/bus-logo.png" alt="">
+
+                    </div>
+
+
+
+
+                </div>
+
+                <!-- 2nd div  -->
+
+                <div>
+
+
+                </div>
+
+            </div>
+
+
+
+
+
+        </section>
+
+
+        <!-- Badhan Paribahan section ends here -->
+
+    </main>
+
+
+
+</body>
+
+</html>
