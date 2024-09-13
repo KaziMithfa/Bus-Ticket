@@ -67,7 +67,7 @@
                     with
                     this Bus service and there are special offers for the students</p>
 
-                <button id="buy-tickets"
+                <button id="buy-tickets" onclick="Scroll()"
                     class="bg-[#1DD100] rounded-sm text-center text-[#030712] lg:mt-6 lg:w-36 lg:py-5 lg:px-7">Buy
                     Tickets</button>
             </div>
@@ -204,7 +204,7 @@
 
         <!-- Badhon Paribahan Section starts here.... -->
 
-        <section class="rounded-tl-[88px] rounded-tr-[88px] rounded-bl-[0px] rounded-br-[0px] badhan-paribahan container mx-auto lg:mt-8 mt-4 text-center .font-raleway
+        <section id="target-section" class="rounded-tl-[88px] rounded-tr-[88px] rounded-bl-[0px] rounded-br-[0px] badhan-paribahan container mx-auto lg:mt-8 mt-4 text-center .font-raleway
             border-t-[2px] border-t-[#1DD100] bg-white
             ">
 
@@ -238,7 +238,8 @@
                         <div class="bg-[#1DD10026] rounded-xl flex items-center justify-center mr-4">
 
                             <img class="w-4 lg:w-7" src="images/seat-green.png" alt="">
-                            <h4 class="text-[#1DD100] lg:text-xl text-xs lg:font-medium  font-normal">40 seats available
+                            <h4 class="text-[#1DD100] lg:text-xl text-xs lg:font-medium  font-normal"><span
+                                    id="total-seat">40</span> seats available
                             </h4>
 
 
@@ -406,12 +407,12 @@
                         <h1 id="D" class="rounded-xl">D</h1>
                         <h1 id="D1" class="text-center rounded-xl bg-[#F7F8F8]">D1</h1>
                         <h1 id="D2" class="text-center rounded-xl bg-[#F7F8F8]">D2</h1>
-                        <h1 id="D3" class="text-center rounded-xl bg-[#1DD100] border border-[##1DD100] text-white">D3
+                        <h1 id="D3" class="text-center rounded-xl bg-[#F7F8F8] border border-[##1DD100] ">D3
                         </h1>
                         <h1 id="D4" class="text-center rounded-xl bg-[#F7F8F8]">D4</h1>
 
                         <h1 id="E" class="rounded-xl">E</h1>
-                        <h1 id="E1" class="text-center rounded-xl bg-[#1DD100] border border-[##1DD100] text-white">E1
+                        <h1 id="E1" class="text-center rounded-xl bg-[#F7F8F8] border border-[##1DD100]">E1
                         </h1>
                         <h1 id="E2" class="text-center rounded-xl bg-[#F7F8F8]">E2</h1>
                         <h1 id="E3" class="text-center rounded-xl bg-[#F7F8F8]">E3</h1>
@@ -425,7 +426,7 @@
 
                         <h1 id="G" class="rounded-xl">G</h1>
                         <h1 id="G1" class="text-center rounded-xl bg-[#F7F8F8]">G1</h1>
-                        <h1 id="G2" class="text-center rounded-xl bg-[#1DD100] border border-[##1DD100] text-white">G2
+                        <h1 id="G2" class="text-center rounded-xl bg-[#F7F8F8] border border-[##1DD100]">G2
                         </h1>
                         <h1 id="G3" class="text-center rounded-xl bg-[#F7F8F8]">G3</h1>
                         <h1 id="G4" class="text-center rounded-xl bg-[#F7F8F8]">G4</h1>
@@ -636,9 +637,9 @@
                         <div class="grid grid-cols-3 grid-rows-7 gap-2  ml-4">
                             <div class="flex flex-row space-x-2">
                                 <p class="font-medium text-xs text-[#030712]">Seat</p>
-                                <h1
+                                <h1 id="selected-seat"
                                     class="bg-[#1DD100] w-[23px] h-[23px] pt-1 text-xs font-bold text-white text-center">
-                                    2
+                                    0
                                 </h1>
 
                             </div>
@@ -646,18 +647,25 @@
                             <p class="font-medium text-xs text-[#030712]">Class</p>
                             <p class="font-medium text-xs text-[#030712]">Price</p>
 
-                            <p class="text-[#03071299] text-xs font-normal">C2</p>
+                            <!-- here we are creating a list to show the selected seats -->
+
+                            <ul id="selectedseat-container">
+
+
+                            </ul>
+
+                            <!-- <p class="text-[#03071299] text-xs font-normal">C2</p>
                             <p class="text-[#03071299] text-xs font-normal">Economy</p>
                             <p class="text-[#03071299] text-xs font-normal">550</p>
 
                             <p class="text-[#03071299] text-xs font-normal">C2</p>
                             <p class="text-[#03071299] text-xs font-normal">Economy</p>
-                            <p class="text-[#03071299] text-xs font-normal">550</p>
+                            <p class="text-[#03071299] text-xs font-normal">550</p> -->
 
                             <hr class="bg-[#03071233] col-span-3">
 
                             <p class="col-span-1 text-[#030712]">Total Price</p>
-                            <p class="col-start-3 col-end-4 text-[#030712]">BDT <span id="tk">1100</span></p>
+                            <p class="col-start-3 col-end-4 text-[#030712]">BDT <span id="tk">0</span></p>
 
                             <div class="col-span-3 rounded-xl bg-[#FFFFFF]">
                                 <input class="col-span-2" type="text" name="" id="" placeholder="Have any Coupon ?">
@@ -666,7 +674,7 @@
                             </div>
 
                             <p class="col-span-1 text-[#030712]">Grand Total</p>
-                            <p class="col-start-3 col-end-4 text-[#030712]">BDT <span id="grand-total">1100</span></p>
+                            <p class="col-start-3 col-end-4 text-[#030712]">BDT <span id="grand-total">0</span></p>
 
                         </div>
 
@@ -811,6 +819,8 @@
 
 
     </div>
+
+    <script src="scripts/connection.js"></script>
 
 
 
