@@ -12,9 +12,41 @@ function Scroll() {
 
 const allSeat = document.getElementsByClassName("select-option");
 let count = 0;
+const containId = [];
 for (const seat of allSeat) {
   seat.addEventListener("click", function (event) {
     const seatName = event.target.innerText;
-    changeColorofSeat(seatName);
+    if (!containId.includes(seatName)) {
+      containId.push(seatName);
+
+      count++;
+
+      if (count == 4) {
+        var applyBtn = document.getElementById("apply-coupon");
+        applyBtn.disabled = false;
+      }
+
+      reduceTotalSeat("total-seat");
+
+      changeColorofSeat(seatName);
+
+      const selectContainer = document.getElementById("selectedseat-container");
+      const li = document.createElement("li");
+
+      const p1 = document.createElement("p");
+      p1.innerText = seatName;
+      const p2 = document.createElement("p");
+      p2.innerText = "Economy";
+      const p3 = document.createElement("p");
+      p3.innerText = 550;
+
+      li.appendChild(p1);
+      li.appendChild(p2);
+      li.appendChild(p3);
+
+      selectContainer.appendChild(li);
+
+      setTotalPrice("tk");
+    }
   });
 }

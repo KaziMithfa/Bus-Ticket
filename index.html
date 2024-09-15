@@ -19,6 +19,8 @@
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 
+    <link rel="stylesheet" href="index.css">
+
     <style>
         .font-raleway {
             font-family: "Raleway", sans-serif;
@@ -165,7 +167,7 @@
                     <img src="images/cupon-devider.png" alt="">
 
                     <div class="text-center .font-inter p-2 lg:p-10">
-                        <h1 class="text-[#030712CC] lg:text-4xl text-xl font-normal lg:font-black">NEW<sub>15</sub>
+                        <h1 class="text-[#030712CC] lg:text-3xl text-xl font-normal lg:font-black">Couple 20
                         </h1>
 
                         <p class="text-[#03071280] text-xs lg:text-xl  font-normal lg:mt-2">Coupon Code</p>
@@ -632,7 +634,7 @@
 
                         <hr class=" bg-[#03071233] w-[409px] h-[1px]">
 
-                        <div class="grid grid-cols-3 grid-rows-7 gap-2  ml-4">
+                        <div class="grid grid-cols-3 grid-rows-9  ml-4">
                             <div class="flex flex-row space-x-2">
                                 <p class="font-medium text-xs text-[#030712]">Seat</p>
                                 <h1 id="selected-seat"
@@ -643,11 +645,11 @@
                             </div>
 
                             <p class="font-medium text-xs text-[#030712]">Class</p>
-                            <p class="font-medium text-xs text-[#030712]">Price</p>
+                            <p class="font-medium text-xs ml-10 text-[#030712]">Price</p>
 
                             <!-- here we are creating a list to show the selected seats -->
 
-                            <ul id="selectedseat-container">
+                            <ul id="selectedseat-container" class="col-span-3 row-span-4">
 
 
                             </ul>
@@ -667,7 +669,8 @@
 
                             <div class="col-span-3 rounded-xl bg-[#FFFFFF]">
                                 <input class="col-span-2" type="text" name="" id="" placeholder="Have any Coupon ?">
-                                <button class="bg-[#1DD100] text-[#FFF] w-20 h-10 col-span-1 ml-14">Apply</button>
+                                <button id="apply-coupon" disabled
+                                    class="bg-[#1DD100] text-[#FFF] w-20 h-10 col-span-1 ml-14">Apply</button>
 
                             </div>
 
