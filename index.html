@@ -668,9 +668,13 @@
                             <p class="col-start-3 col-end-4 text-[#030712]">BDT <span id="tk">0</span></p>
 
                             <div class="col-span-3 rounded-xl bg-[#FFFFFF]">
-                                <input class="col-span-2" type="text" name="" id="" placeholder="Have any Coupon ?">
+                                <input id="coupon-text" class="col-span-2" type="text" name="" id=""
+                                    placeholder="Have any Coupon ?">
                                 <button id="apply-coupon" disabled
                                     class="bg-[#1DD100] text-[#FFF] w-20 h-10 col-span-1 ml-14">Apply</button>
+
+                                <p id="discountP" class="hidden">Total Discount: <span class="ml-44" id="discount">
+                                    </span>Tk</p>
 
                             </div>
 
@@ -687,12 +691,14 @@
                             <input type="text" placeholder="Enter your name" class="w-[400px] h-[64px] mt-2">
 
                             <p class=" w-[140px] h-[19px] text-[#030712] mt-1">Phone Number*</p>
-                            <input type="text" placeholder="Enter your phone number" class="w-[400px] h-[64px] mt-2">
+                            <input id="phoneNumber" type="text" placeholder="Enter your phone number"
+                                class="w-[400px] h-[64px] mt-2">
 
                             <p class=" w-[140px] h-[19px] text-[#030712] mt-1">Email ID*</p>
-                            <input type="text" placeholder="Enter your email id" class="w-[400px] h-[64px] mt-2">
+                            <input type="email" placeholder="Enter your email id" class="w-[400px] h-[64px] mt-2">
 
-                            <button class="lg:w-[433px] w-[330px] py-5 px-7 bg-[#1DD100] text-[#FFFFFF]">Next</button>
+                            <button id="nextBtn" disabled
+                                class="lg:w-[433px] w-[330px] py-5 px-7 bg-[#1DD100] text-[#FFFFFF]">Next</button>
 
                             <div class="flex flex-row items-center justify-center mt-2">
 

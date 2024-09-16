@@ -20,3 +20,11 @@ function setTotalPrice(id) {
   const intTotalPrice = parseInt(totalPriceTxt) + 550;
   totalPrice.innerText = intTotalPrice;
 }
+
+//this function increase the seat number
+function increaseSeatNumber(id) {
+  const seatID = document.getElementById(id);
+  const seatIDtxt = seatID.innerText;
+  const seatIdInt = parseInt(seatIDtxt) + 1;
+  seatID.innerText = seatIdInt;
+}
