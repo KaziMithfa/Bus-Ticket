@@ -620,7 +620,7 @@
 
                 <!-- Select your seat second section starts from here... -->
 
-                <div class="lg:w-[35%] flex flex-row .font-inter">
+                <div class="lg:w-[35%] flex flex-row .font-inter relative">
 
 
                     <img class="hidden lg:block h-[800px] w-[2px] bg-[#0307124D]" src="images/cupon-devider.png"
@@ -697,8 +697,9 @@
                             <p class=" w-[140px] h-[19px] text-[#030712] mt-1">Email ID*</p>
                             <input type="email" placeholder="Enter your email id" class="w-[400px] h-[64px] mt-2">
 
-                            <button id="nextBtn" disabled
+                            <button id="nextBtn"
                                 class="lg:w-[433px] w-[330px] py-5 px-7 bg-[#1DD100] text-[#FFFFFF]">Next</button>
+
 
                             <div class="flex flex-row items-center justify-center mt-2">
 
@@ -712,6 +713,34 @@
                             </div>
 
                         </div>
+
+                        <!-- success part starts here which is going to be hidden -->
+
+                        <div class="flex absolute z-[1000] top-60   flex-col items-center mt-6 rounded-lg bg-[#FFF] hidden"
+                            id="successModal">
+
+                            <img src="images/success.png" alt="">
+
+                            <p class="text-[#27AE60] mt-2 lg:text-2xl text-xl lg:font-bold font-medium lg:mt-5">SUCCESS
+                            </p>
+
+                            <p
+                                class="text-[#4A4A4A] text-center lg:text-xl text-xs lg:font-bold font-medium lg:mt-5 mt-2">
+                                Thank you for
+                                Booking Our Bus
+                                Seats.
+                                We are working hard to find the best service and deals for you</p>
+
+                            <p class="text-[#4A4A4A] mt-2 lg:text-2xl text-xs font-light  ">Shortly you will find a
+                                confirmation in your
+                                email.</p>
+
+                            <button
+                                class="rounded-[32px] bg-[#27AE60] mt-5 text-[#FFF] text-center w-[300px] lg:text-xl text-[16px]    lg:font-semibold font-medium">Continue</button>
+
+                        </div>
+
+
 
                     </div>
 
@@ -745,6 +774,13 @@
         <!-- Select your seat section ends here.... -->
 
     </main>
+
+
+
+
+
+
+
 
     <footer class="mt-5 ;lg:h-[450px] bg-[#030712] lg:pl-[135px] lg:pt-[120px]  pt-[20px] ">
 
@@ -799,33 +835,7 @@
 
     </footer>
 
-    <!-- success part starts here which is going to be hidden -->
 
-    <div class="flex flex-col items-center mt-6 rounded-lg bg-[#FFF] hidden">
-
-        <img src="images/success.png" alt="">
-
-        <p class="text-[#27AE60] mt-2 lg:text-2xl text-xl lg:font-bold font-medium lg:mt-5">SUCCESS</p>
-
-        <p class="text-[#4A4A4A] text-center lg:text-xl text-xs lg:font-bold font-medium lg:mt-5 mt-2">Thank you for
-            Booking Our Bus
-            Seats.
-            We are working hard to find the best service and deals for you</p>
-
-        <p class="text-[#4A4A4A] mt-2 lg:text-2xl text-xs font-light  ">Shortly you will find a confirmation in your
-            email.</p>
-
-        <button
-            class="rounded-[32px] bg-[#27AE60] mt-5 text-[#FFF] text-center w-[300px] lg:text-xl text-[16px]    lg:font-semibold font-medium">Continue</button>
-
-
-
-
-
-
-
-
-    </div>
 
     <script src="scripts/connection.js"></script>
     <script src="scripts/utility.js"></script>

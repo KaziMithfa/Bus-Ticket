@@ -21,44 +21,47 @@ for (const seat of allSeat) {
   seat.addEventListener("click", function (event) {
     const seatName = event.target.innerText;
     if (!containId.includes(seatName)) {
-      containId.push(seatName);
-
       count++;
-
-      reduceTotalSeat("total-seat");
-
-      changeColorofSeat(seatName);
-      increaseSeatNumber("selected-seat");
-
-      const selectContainer = document.getElementById("selectedseat-container");
-      const li = document.createElement("li");
-
-      const p1 = document.createElement("p");
-      p1.innerText = seatName;
-      const p2 = document.createElement("p");
-      p2.innerText = "Economy";
-      const p3 = document.createElement("p");
-      p3.innerText = 550;
-
-      li.appendChild(p1);
-      li.appendChild(p2);
-      li.appendChild(p3);
-
-      selectContainer.appendChild(li);
-
-      setTotalPrice("tk");
-
-      //here I am working on coupon and grand total
-      if (count == 4) {
-        setTotalPrice("grand-total");
-        var applyBtn = document.getElementById("apply-coupon");
-        applyBtn.disabled = false;
+      if (count > 4) {
+        alert("You can not buy more than 4 tickests");
       } else {
-        setTotalPrice("grand-total");
+        containId.push(seatName);
+
+        reduceTotalSeat("total-seat");
+
+        changeColorofSeat(seatName);
+        increaseSeatNumber("selected-seat");
+
+        const selectContainer = document.getElementById(
+          "selectedseat-container"
+        );
+        const li = document.createElement("li");
+
+        const p1 = document.createElement("p");
+        p1.innerText = seatName;
+        const p2 = document.createElement("p");
+        p2.innerText = "Economy";
+        const p3 = document.createElement("p");
+        p3.innerText = 550;
+
+        li.appendChild(p1);
+        li.appendChild(p2);
+        li.appendChild(p3);
+
+        selectContainer.appendChild(li);
+
+        setTotalPrice("tk");
+
+        //here I am working on coupon and grand total
+        if (count == 4) {
+          setTotalPrice("grand-total");
+          var applyBtn = document.getElementById("apply-coupon");
+          applyBtn.disabled = false;
+        } else {
+          setTotalPrice("grand-total");
+        }
       }
     }
-
-    nextBtn.addEventListener("click", checkConditions);
   });
 }
 
@@ -111,11 +114,30 @@ function checkConditions() {
   const phoneNumbertxt = phoneNumberInput.value.trim();
   if (containId.length > 0 && phoneNumbertxt !== "") {
     nextBtn.disabled = false;
-    phoneNumberInput.value = "";
-    alert("Everthing is alright");
+    console.log("everything is okay");
   } else {
     nextBtn.disabled = true;
 
     console.log("not okay");
   }
 }
+
+//function to showModal
+
+function showModal() {
+  const modal = document.getElementById("successModal");
+  modal.classList.remove("hidden");
+}
+
+// function to hideModal
+
+function closeModal() {
+  const modal = document.getElementById("successModal");
+  modal.classList.add("hidden");
+}
+
+//
+nextBtn.addEventListener("click", function () {
+  checkConditions();
+  showModal();
+});
